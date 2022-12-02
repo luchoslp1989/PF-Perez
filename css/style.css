@@ -66,7 +66,7 @@ h1, h2{
 
 .encabezado__img--fluid{
 
-    width: 100%;
+    width: auto;
     box-sizing: border-box
 }
 
@@ -103,6 +103,20 @@ h1, h2{
     margin-right: 20px;
 }
 
+.direccion--textLeft{
+    text-align: left;
+    width: 40%;
+    margin-right: 50px;
+}
+
+.mapa--alignRight{
+    width: 40%;
+    height: auto;
+    padding-right: 50px;
+    
+    
+}
+
 footer ul{
     margin: auto;
     display: inline-block;
@@ -110,4 +124,22 @@ footer ul{
     footer ul li{
         display: inline-block;
         margin: auto;
+    }
+
+#mapa{
+    background-color: #BABF2A;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+
+}
+
+#mapa article{
+    display: inline-block;
+    
+    
+}
+    #mapa article p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
     }
