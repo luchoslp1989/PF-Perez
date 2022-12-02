@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Open+Sans&family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;   
+}
+
+p{
+    color: black;
+    font-family: 'Open sans', sans-serif;
+    font-size: 2em;
+}
+
+nav{
+    background-color: #65a603;
+    /* position */
+
+    /* padding */
+    padding: 8px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    nav ul{
+
+        display: inline-block;
+        margin-left: 10px;
+
+    }
+
+        nav ul li{
+
+            display: inline-block;
+            list-style: none;
+            margin-right: 8px;
+            
+        }
+
+            nav ul li a{
+            color: #000000;
+            font-size: 2em;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            
+            }
+
+            nav ul li a:hover{
+                color: #1b4001;
+                text-decoration: underline;
+            }
+
+h1, h2{
+    color: #000000;
+    font-size: 4em;
+    font-family: 'Nunito', sans-serif;
+}
+
+.novedades__articulo{
+    width: 60%;
+    height: auto;
+    margin: 40px auto;
+    padding: 50px 20px;
+    border: dotted 3 px #1b4001;
+}
+
+.encabezado__img--fluid{
+
+    width: 100%;
+    box-sizing: border-box
+}
+
+.main__titulo--xl{
+    font-size: 3em;
+}
+
+.principal__section{
+    width: 65%;
+    height: auto;
+    display: inline-block;
+    margin: 50px 20px;
+}
+
+.pluginFacebook{
+    width: 25%;
+    height: auto;
+    display: inline-block;
+   
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.pie{
+    padding: 10px 50px;
+    background-color: #65a603;
+    text-align: center;
+}
+
+.pie__icon--small{
+    width: 30px;
+    margin-right: 20px;
+}
+
+footer ul{
+    margin: auto;
+    display: inline-block;
+}
+    footer ul li{
+        display: inline-block;
+        margin: auto;
+    }

@@ -1,0 +1,23 @@
+desktop
+
+	inicio: https://wireframe.cc/PzfT6f
+
+	nosotros: https://wireframe.cc/aUzpg2
+
+	novedades: https://wireframe.cc/jswffF
+
+	servicios: https://wireframe.cc/eydNRO
+
+	contacto: https://wireframe.cc/swDjau
+	
+Mobile
+
+	inicio: https://wireframe.cc/yTFj3s
+
+	contacto: https://wireframe.cc/hQlmtv
+
+	Servicios: https://wireframe.cc/LN9LTX
+
+	novedades: https://wireframe.cc/fy00iU
+
+	nosotros: https://wireframe.cc/KUC4FJ
