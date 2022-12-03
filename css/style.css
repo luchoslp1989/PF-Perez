@@ -59,6 +59,17 @@ h1, h2{
     font-family: 'Nunito', sans-serif;
 }
 
+
+
+footer ul{
+    margin: auto;
+    display: inline-block;
+}
+    footer ul li{
+        display: inline-block;
+        margin: auto;
+    }
+
 .bgColorLight{
     background-color: #C8D98B;
 }
@@ -72,22 +83,24 @@ h1, h2{
     width: 100%;
 }
 
-.main__titulo--xl{
+.tituloPrincipalXL{
     font-size: 3em;
 }
 
-.principal__section{
-    width: 65%;
+.principalSection{
+    width: 70%;
     height: auto;
     display: inline-block;
     margin: 50px 20px;
+    border: dotted 3px #88A61C;
 }
 
 .pluginFacebook{
-    width: 25%;
+    width: 20%;
     height: auto;
     display: inline-block;
-   
+    margin-top: 50px;
+    
 }
 
 .textCenter{
@@ -96,6 +109,14 @@ h1, h2{
 
 .dFlex{
     display: flex;
+}
+
+.spaceBtwn{
+    justify-content: space-between;
+}
+
+.alignContentCenter{
+    align-content: center;
 }
 
 .pie{
@@ -109,7 +130,7 @@ h1, h2{
     margin-right: 20px;
 }
 
-.direccion--textLeft{
+.textLeft{
     text-align: left;
     width: 40%;
     margin-right: 50px;
@@ -122,15 +143,6 @@ h1, h2{
     
     
 }
-
-footer ul{
-    margin: auto;
-    display: inline-block;
-}
-    footer ul li{
-        display: inline-block;
-        margin: auto;
-    }
 
 #mapa{
     background-color: #BABF2A;
