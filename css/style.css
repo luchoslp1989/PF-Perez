@@ -20,6 +20,9 @@ nav{
     padding: 8px 20px;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
     nav ul{
@@ -33,7 +36,7 @@ nav{
 
             display: inline-block;
             list-style: none;
-            margin-right: 8px;
+            margin-right: 10px;
             
         }
 
@@ -56,18 +59,17 @@ h1, h2{
     font-family: 'Nunito', sans-serif;
 }
 
-.novedades__articulo{
-    width: 60%;
-    height: auto;
-    margin: 40px auto;
-    padding: 50px 20px;
-    border: dotted 3 px #1b4001;
+.bgColorLight{
+    background-color: #C8D98B;
 }
 
-.encabezado__img--fluid{
+.bgColorDark{
+    background-color: #497320;
+}
 
-    width: auto;
-    box-sizing: border-box
+.imgFluid{
+
+    width: 100%;
 }
 
 .main__titulo--xl{
@@ -92,13 +94,17 @@ h1, h2{
     text-align: center;
 }
 
+.dFlex{
+    display: flex;
+}
+
 .pie{
     padding: 10px 50px;
     background-color: #65a603;
     text-align: center;
 }
 
-.pie__icon--small{
+.iconSmall{
     width: 30px;
     margin-right: 20px;
 }
@@ -109,7 +115,7 @@ h1, h2{
     margin-right: 50px;
 }
 
-.mapa--alignRight{
+.mapaAlignRight{
     width: 40%;
     height: auto;
     padding-right: 50px;
