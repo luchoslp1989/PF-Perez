@@ -17,7 +17,7 @@ nav{
     /* position */
 
     /* padding */
-    padding: 8px 20px;
+    padding: 8px 30px;
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -42,7 +42,7 @@ nav{
 
             nav ul li a{
             color: #000000;
-            font-size: 2em;
+            font-size: 1.2em;
             font-family: 'Roboto', sans-serif;
             text-decoration: none;
             
@@ -70,6 +70,10 @@ footer ul{
         margin: auto;
     }
 
+.paddingStandard{
+    padding: 8px 30px;
+}
+
 .bgColorLight{
     background-color: #C8D98B;
 }
@@ -87,12 +91,21 @@ footer ul{
     font-size: 2.5em;
 }
 
+.tituloMd{
+    font-size: 1.5em;
+}
+
+.parrafoSm{
+    font-size: 1em;
+}
+
 .principalSection{
     width: 70%;
     height: auto;
     display: inline-block;
     margin: 50px 20px;
     border: dotted 3px #88A61C;
+    padding: 10px 10px;
 }
 
 .pluginFacebook{
@@ -136,28 +149,33 @@ footer ul{
     margin-right: 50px;
 }
 
-.mapaAlignRight{
-    width: 40%;
-    height: auto;
-    padding-right: 50px;
-    
-    
+.justifyContentSpaceBetween{
+    align-content: space-between;
 }
 
-#mapa{
-    background-color: #BABF2A;
-    padding-top: 30px;
+.seccionDireccion{
+    width: 45%;
     padding-left: 30px;
-    padding-bottom: 30px;
-
 }
 
-#mapa article{
-    display: inline-block;
+.seccionGoogleMaps{
+    width: 30%;
+    padding-right: 30px;
+}
+
+
+
+section.mapa{
+    background-color: #BABF2A;
+    
+}
+
+section.mapa article{
+    /* display: inline-block; */
     
     
 }
-    #mapa article p{
+    section.mapa article p{
     font-family: 'Nunito', sans-serif;
     font-size: 1em;
     }
