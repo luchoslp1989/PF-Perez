@@ -27,25 +27,25 @@ nav{
 
     nav ul{
 
-        display: inline-block;
+        display: flex;
         margin-left: 10px;
 
     }
 
         nav ul li{
 
-            display: inline-block;
+            display: flex;
             list-style: none;
             margin-right: 10px;
+            justify-content: space-between;
             
         }
 
             nav ul li a{
             color: #000000;
-            font-size: 1.2em;
+            font-size: 1.4em;
             font-family: 'Roboto', sans-serif;
             text-decoration: none;
-            
             }
 
             nav ul li a:hover{
