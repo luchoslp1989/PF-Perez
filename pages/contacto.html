@@ -41,19 +41,29 @@
     <!-- cierra header -->
   <main>
        <section>
-           <h2>Contacto</h2>
-           <form action="envio.php" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre">
-                <label for="tel">Telefono:</label>
-                <input type="tel" name="tel" id="tel">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="emil">
-                <label for="mensaje">Deja tu mensaje:</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <input type="reset" value="Cancelar">
-                <input type="submit" value="Enviar">
-           </form> 
+           <h1 class="tituloMd">Contacto</h1>
+           <div class="dFlex justifyContentSpaceBetween directionColumn">
+                <form action="envio.php" method="post">
+                    <div class="dFlex justifyContentSpaceBetween">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div>
+                        <label for="tel">Telefono:</label>
+                        <input type="tel" name="tel" id="tel">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="emil">
+                    </div>
+                    <div>
+                        <label for="mensaje">Deja tu mensaje:</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                        <input type="reset" value="Cancelar">
+                        <input type="submit" value="Enviar">
+                </form> 
+           </div>
        </section>
        <section>
         <ul>
