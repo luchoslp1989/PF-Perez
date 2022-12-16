@@ -202,12 +202,7 @@ section.mapa{
     
 }
 
-section.mapa article{
-    /* display: inline-block; */
-    
-    
-}
-    section.mapa article p{
+  section.mapa article p{
     font-family: 'Nunito', sans-serif;
     font-size: 1em;
     }
