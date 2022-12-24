@@ -281,7 +281,7 @@ footer ul{
 	.gridContainer{
 		display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 25vh 50vh 70vh 10vh;
+        grid-template-rows: 25vh 35vh 70vh 90vh 10vh;
         grid-template-areas: 
         "nav"
         "header"
@@ -314,7 +314,7 @@ footer ul{
     .principalSection{
         width: auto;
         height: auto;
-        margin: 0px 10px;
+        margin: 10px 10px;
         /* display: inline-block; */
         border: dotted 3px #88A61C;
         padding: 10px 10px;
