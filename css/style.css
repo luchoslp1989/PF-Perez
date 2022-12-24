@@ -9,15 +9,14 @@
 p{
     color: black;
     font-family: 'Open sans', sans-serif;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
+    font-size: 0.8em;
 }
 
 
-nav{
+/* nav{
     background-color: #65a603;
-    /* position */
-
-    /* padding */
+   
     padding: 8px 30px;
     width: 100%;
     height: 20vh;
@@ -54,6 +53,29 @@ nav{
             nav ul li a:hover{
                 color: #1b4001;
                 text-decoration: underline;
+            } */
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    nav ul{
+      display: flex;  
+    }
+
+        nav ul li{
+            margin-left: 10px;
+            margin-bottom: 5px;
+            font-size: 0.7em;
+            list-style: none;
+            justify-content: space-around;
+        }
+
+            nav ul li a{
+                color: #000000;
+                text-decoration: none;
             }
 
 h1, h2{
@@ -75,7 +97,7 @@ footer ul{
     }
 
 .paddingStandard{
-    padding: 8px 30px;
+    padding: 20px 30px 110px 30px;
 }
 
 .bgColorLight{
@@ -92,7 +114,8 @@ footer ul{
 }
 
 .tituloPrincipalXL{
-    font-size: 2.5em;
+    /* font-size: 2.5em; */
+    font-size: 1.5em;
 }
 
 .tituloMd{
@@ -104,21 +127,22 @@ footer ul{
 }
 
 .principalSection{
-    width: 55%;
+    width: auto;
     height: auto;
     /* display: inline-block; */
-    margin: 50px 20px;
+    margin: 0px 10px;
     border: dotted 3px #88A61C;
     padding: 10px 10px;
 }
 
 .pluginFacebook{
-    width: 28%;
+    width: 35vw;
     height: auto;
-    /* display: inline-block; */
-    margin-top: 50px;
+    display: none;
+    margin-top: 50px 30px;
     border: solid aqua 3px;
-    
+    /* display: none;
+     */
 }
 
 .textCenter{
@@ -127,6 +151,10 @@ footer ul{
 
 .dFlex{
     display: flex;
+}
+
+.fDirection{
+    flex-direction: column;
 }
 
 .spaceBtwn{
@@ -148,7 +176,7 @@ footer ul{
     margin-right: 8px;
     width: 100%;
     box-sizing: border-box;
-    height: 8vh;
+    height: 10vh;
     
 }
 
@@ -168,7 +196,11 @@ footer ul{
 }
 
 .justifyContentCenter{
-    align-content: center;
+    justify-content: center;
+}
+
+.stretch{
+    justify-content: stretch;
 }
 
 .seccionDireccion{
@@ -177,8 +209,8 @@ footer ul{
 }
 
 .seccionGoogleMaps{
-    width: 45%;
-    padding-right: 30px;
+    width: auto;
+    padding: 30px;
 }
 
 .imgSm{
@@ -195,14 +227,190 @@ footer ul{
 
 }
 
+.alignItem{
+    align-items: flex-start;
+}
 
 
-section.mapa{
+/* ======================================GRID==================================================== */
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25vh 25vh 70vh 100vh 10vh;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "mapa"
+    "pie";
+
+
+}
+
+#botonera{
+    background-color: #65a603;
+    grid-area: nav;
+}
+
+#imgHeader{
+    grid-area: header;
+}
+
+#main{
+    grid-area: main;
+
+}
+
+#aside{
+    grid-area: aside;
+}
+
+#mapa{
+    grid-area: mapa;
     background-color: #BABF2A;
+    width: auto;
+    height: auto;
+}
+
+#footer{
+    grid-area: pie;
+}
+
+@media (min-width:768px){
+	.gridContainer{
+		display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25vh 35vh 70vh 90vh 10vh;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "mapa"
+        "pie";
+	}
+
+    p{
+        color: black;
+        font-family: 'Open sans', sans-serif;
+        font-size: 1.3em;
+        /* font-size: 0.8em; */
+    }
+
+    .pluginFacebook{
+        width: 20vw;
+        height: auto;    
+        margin-top: 50px;
+        border: solid aqua 3px;
+        display: none;
+        
+        
+    }
+
+    .principalMargin{
+        margin-top: 50px;
+    }
+
+    .principalSection{
+        width: auto;
+        height: auto;
+        margin: 10px 10px;
+        /* display: inline-block; */
+        border: dotted 3px #88A61C;
+        padding: 10px 10px;
+    }
+
+    .paddingStandard{
+    padding: 30px 30px 70px 30px;
+    }
+
+    
+
+
+
+
+}
+
+@media (min-width:1024px){
+    
+
+	.gridContainer{
+		display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 15vh 50vh 70vh 55vh 8vh;
+        grid-template-areas: 
+        "nav nav"
+        "header header"
+        "main aside"
+        "mapa mapa"
+        "pie pie"; 
+        
+
+	}
+
+    nav{
+        /* padding: 0px 30px 20px 30px; */
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: row;
+    }
+    
+        nav ul{
+            display: flex;
+            margin-left: 10px;
+            justify-content: space-between;
+            
+        }
+    
+            nav ul li{
+                display: flex;
+                list-style: none;
+                margin-right: 10px;
+                justify-content: space-between;
+            }
+    
+                nav ul li a{
+                    color: #000000;
+                    font-size: 1.4em;
+                    font-family: 'Roboto', sans-serif;
+                    text-decoration: none;
+                }
+
+    p{
+        color: black;
+        font-family: 'Open sans', sans-serif;
+        font-size: 1.5em;
+    }
+
+    .principalSection{
+        width: 80%;
+        height: auto;
+        /* display: inline-block; */
+        border: dotted 3px #88A61C;
+        margin: 10px;
+    }
+
+    .pluginFacebook{
+        width: 76%;
+        height: auto;
+        border: solid aqua 3px;
+        display: inline-block;        
+        
+    }
+
+
+        .fDirection{
+            flex-direction: row;
+        }
+
+        .seccionGoogleMaps{
+            width: 70%;
+            padding: 30px;
+        }
     
 }
 
-  section.mapa article p{
-    font-family: 'Nunito', sans-serif;
-    font-size: 1em;
-    }
