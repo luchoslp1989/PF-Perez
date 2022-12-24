@@ -227,8 +227,8 @@ footer ul{
 
 }
 
-.principalMargin{
-    
+.alignItem{
+    align-items: flex-start;
 }
 
 
@@ -337,7 +337,7 @@ footer ul{
 	.gridContainer{
 		display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: 20vh 50vh 50vh 50vh 10vh;
+        grid-template-rows: 15vh 50vh 70vh 55vh 8vh;
         grid-template-areas: 
         "nav nav"
         "header header"
@@ -348,14 +348,9 @@ footer ul{
 
 	}
 
-    *{
-        margin: 0;
-        padding: 0;
-    }
-
     nav{
         /* padding: 0px 30px 20px 30px; */
-        width: 70%;
+        width: 100%;
         height: auto;
         box-sizing: border-box;
         display: flex;
@@ -392,15 +387,15 @@ footer ul{
     }
 
     .principalSection{
-        width: 100%;
+        width: 80%;
         height: auto;
         /* display: inline-block; */
         border: dotted 3px #88A61C;
-        margin: 20px;
+        margin: 10px;
     }
 
     .pluginFacebook{
-        width: 100%;
+        width: 76%;
         height: auto;
         border: solid aqua 3px;
         display: inline-block;        
@@ -412,6 +407,10 @@ footer ul{
             flex-direction: row;
         }
 
+        .seccionGoogleMaps{
+            width: 70%;
+            padding: 30px;
+        }
     
 }
 
