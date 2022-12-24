@@ -234,7 +234,7 @@ footer ul{
 
 /* ======================================GRID==================================================== */
 
-#gridContainer{
+.gridContainer{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 25vh 25vh 70vh 100vh 10vh;
@@ -278,7 +278,7 @@ footer ul{
 }
 
 @media (min-width:768px){
-	#contenedor-grid{
+	.gridContainer{
 		display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 25vh 50vh 70vh 10vh;
@@ -332,22 +332,30 @@ footer ul{
 }
 
 @media (min-width:1024px){
-	#contenedor-grid{
+    
+
+	.gridContainer{
 		display: grid;
-        grid-template-columns: 60vw 40vw;
-        grid-template-rows: 20vh 60vh 250vh 200vh 10vh;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 20vh 50vh 50vh 50vh 10vh;
         grid-template-areas: 
         "nav nav"
         "header header"
-        "main main"
+        "main aside"
         "mapa mapa"
-        "pie pie";
+        "pie pie"; 
+        
 
 	}
 
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
     nav{
         /* padding: 0px 30px 20px 30px; */
-        width: auto;
+        width: 70%;
         height: auto;
         box-sizing: border-box;
         display: flex;
@@ -384,31 +392,21 @@ footer ul{
     }
 
     .principalSection{
-        width: 55vw;
+        width: 100%;
         height: auto;
         /* display: inline-block; */
         border: dotted 3px #88A61C;
-        padding: 10px 10px;
-        margin-top: 80px;
+        margin: 20px;
     }
 
     .pluginFacebook{
-        width: 25vw;
-        height: auto;    
-        margin-top: 150px;
+        width: 100%;
+        height: auto;
         border: solid aqua 3px;
-        display: inline-block;
-        
+        display: inline-block;        
         
     }
 
-    .paddingStandard{
-        padding: 30px 30px 50px 30px;
-        }
-
-        .principalMargin{
-            margin-top: 60px;
-        }
 
         .fDirection{
             flex-direction: row;
