@@ -1,0 +1,15 @@
+Tools:
+
+Cheatsheet de clases de Bs5: https://bootstrap-cheatsheet.themeselection.com/
+
+Generador de botones de Bs: https://bootsnipp.com/buttons
+
+Página de componentes #1: https://bootswatch.com/default/
+
+Página de componentes #2: https://www.bootpress.org/components/bootstrap.html
+
+Codepen de Bs (un “pizarrón web” para hacer pruebas): http://shoelace.io/
+
+Extras:
+
+Tutorial (qué, para qué, ventajas, etc.): https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/

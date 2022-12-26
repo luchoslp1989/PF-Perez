@@ -137,6 +137,21 @@ footer ul{
     font-size: 1em;
 }
 
+.iconsContact{
+    display: flex;
+    
+}
+    .iconsContact ul{
+        display: flex
+        flex-direction: column;
+    }
+        .iconsContact ul li{
+            list-style: none;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
 .principalSection{
     width: auto;
     height: auto;
@@ -248,7 +263,7 @@ footer ul{
 .gridContainer{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 25vh 25vh 70vh 100vh 10vh;
+    grid-template-rows: auto 13vh 80vh 130vh 10vh;
     grid-template-areas: 
     "nav"
     "header"
@@ -292,7 +307,7 @@ footer ul{
 	.gridContainer{
 		display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 25vh 35vh 70vh 100vh 10vh;
+        grid-template-rows: 25vh 35vh 80vh 110vh 10vh;
         grid-template-areas: 
         "nav"
         "header"

@@ -46,45 +46,74 @@
     </header>
     <!-- cierra header -->
   <main class="dFlex">
-       <section>
-           <h1 class="tituloMd">Contacto</h1>
-           <div class="dFlex justifyContentSpaceBetween directionColumn">
-                <form action="envio.php" method="post">
-                    <div class="dFlex">
-                        <label for="nombre">Nombre: </label>
-                        <input type="text" name="nombre" id="nombre">
-                    </div>
-                    <div>
-                        <label for="tel">Telefono: </label>
-                        <input type="tel" name="tel" id="tel">
-                    </div>
-                    <div>
-                        <label for="email">Email: </label>
-                        <input type="email" name="email" id="emil">
-                    </div>
-                    <div class="dFlex directionColumn">
-                        <label for="mensaje">Deja tu mensaje:</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                        <input type="reset" value="Cancelar">
-                        <input type="submit" value="Enviar">
-                </form> 
-           </div>
+      <div class="row mx-auto">
+        <section class="col-sm-12 col-md-6 col-lg-6 container-fluid my-3"> 
+            <form class="dFlex justifyContentSpaceBetween directionColumn mt-3 container-fluid">
+                <h1 class="tituloMd">Contacto</h1>
+                <!-- inicia form bs -->
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                  <input type="string" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput2" class="form-label">Telefono</label>
+                  <input type="tel" class="form-control" id="exampleFormControlInput2" placeholder="Cod de Area sin 0 + Numero sin 15">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput2" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Deje su Mensaje:</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <!-- fin form bs -->
+                <div class="container-fluid">
+                  <input type="reset" value="Cancelar">
+                  <input type="submit" value="Enviar">
+                </div>
+                  <!-- <form action="envio.php" method="post">
+                      <div class="dFlex">
+                          <label for="nombre">Nombre: </label>
+                          <input type="text" name="nombre" id="nombre">
+                      </div>
+                      <div>
+                          <label for="tel">Telefono: </label>
+                          <input type="tel" name="tel" id="tel">
+                      </div>
+                      <div>
+                          <label for="email">Email: </label>
+                          <input type="email" name="email" id="emil">
+                      </div>
+                      <div class="dFlex directionColumn">
+                          <label for="mensaje">Deja tu mensaje:</label>
+                          <textarea name="" id="" cols="30" rows="10"></textarea>
+                      </div>
+                          <input type="reset" value="Cancelar">
+                          <input type="submit" value="Enviar">
+                  </form>  -->
+              </form>
+      </section>
+      <section class="col-sm-12 col-md-6 col-lg-6 container-fluid my-3 iconsContact">
+          <ul>
+              <li>
+                  <a href="https://api.whatsapp.com/send?phone=541122334455" target="_blank">
+                    <img src="../img/icons/whatsapp.png" alt="Logo de Whatsapp">
+                  </a>
+                  <h2>Contactanos por Whatsapp</h2>
+              </li>
+              <li>
+                  <a href="#">
+                    <img src="../img/icons/messenger.png" alt="Logo de Facebook Messenger">
+                  </a>
+                  <h2>Contactanos por Facebook Messenger</h2>
+              </li>
+          </ul>
        </section>
+      </div>
+  
     </main>
-    <div>
-    <ul>
-        <li>
-            <img src="../img/icons/whatsapp.png" alt="Logo de Whatsapp">
-            <h3>Contactanos po Whatsapp</h3>
-        </li>
-        <li>
-            <img src="../img/icons/messenger.png" alt="Logo de Facebook Messenger">
-            <h3>Contactanos po Facebook Messenger</h3>
-        </li>
-    </ul>
-    </div>
-    
+        
     <!-- cierra main -->
     <footer  class="pie">
         <!-- inicia lista de redes sociales -->
