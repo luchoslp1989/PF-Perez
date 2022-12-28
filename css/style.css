@@ -385,7 +385,7 @@ footer ul{
 	.gridContainer{
 		display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: 15vh 50vh 70vh 55vh 8vh;
+        grid-template-rows: 15vh 50vh 75vh 60vh 8vh;
         grid-template-areas: 
         "nav nav"
         "header header"
