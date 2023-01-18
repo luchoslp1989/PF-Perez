@@ -193,7 +193,7 @@ footer ul li {
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 13vh 80vh 130vh 10vh;
+  grid-template-rows: auto 20vh 90vh 130vh 10vh;
   grid-template-areas: "nav" "header" "main" "mapa" "pie";
 }
 .gridContainer #botonera {
@@ -208,6 +208,13 @@ footer ul li {
 }
 .gridContainer #aside {
   grid-area: aside;
+}
+.gridContainer #aside .pluginFacebook {
+  width: 35vw;
+  height: auto;
+  display: none;
+  margin-top: 50px 30px;
+  border: solid aqua 3px;
 }
 .gridContainer #mapa {
   grid-area: mapa;
@@ -239,7 +246,7 @@ footer ul li {
     font-family: "Open sans", sans-serif;
     font-size: 1.2em;
   }
-  .gridContainer .pluginFacebook {
+  .gridContainer #aside .pluginFacebook {
     width: 20vw;
     height: auto;
     margin-top: 50px;
@@ -284,6 +291,12 @@ footer ul li {
     font-weight: 600;
     background-size: 100% 2px;
   }
+  .gridContainer #aside .pluginFacebook {
+    width: 76%;
+    height: auto;
+    border: solid aqua 3px;
+    display: inline-block;
+  }
   .gridContainer p {
     color: black;
     font-family: "Open sans", sans-serif;
@@ -294,12 +307,6 @@ footer ul li {
     height: auto;
     border: dotted 3px #C8D98B;
     margin: 10px;
-  }
-  .gridContainer .pluginFacebook {
-    width: 76%;
-    height: auto;
-    border: solid aqua 3px;
-    display: inline-block;
   }
   .gridContainer .fDirection {
     flex-direction: row;
