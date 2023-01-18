@@ -7,7 +7,7 @@
             a{
                 color: $fontColor;
                 text-decoration: none;
-                @include subrayadoAnimado();
+                @include subrayadoAnimado(currentColor,currentColor);
                 &:hover{
                     color: black;
                     font-weight: 600;

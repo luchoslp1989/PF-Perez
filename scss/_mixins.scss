@@ -1,5 +1,5 @@
-@mixin subrayadoAnimado(){
-    background-image: linear-gradient(currentColor, currentColor);
+@mixin subrayadoAnimado($color1,$color2){
+    background-image: linear-gradient($color1, $color2);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
@@ -8,5 +8,11 @@
 
 @mixin subrayadoAnimadoHover(){
     background-size: 100% 2px;
+}
+
+@mixin parrafos($fontSize, $fontFamily, $fColor){
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    color: $fColor;
 }
 

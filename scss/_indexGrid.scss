@@ -98,11 +98,11 @@
                         color: black;
                         font-size: 1em;
                         text-decoration: none;
-                        @include subrayadoAnimado;
+                        @include subrayadoAnimado(currentColor,currentColor);
                         &:hover{
                             color: black;
                             font-weight: 600;
-                            @include subrayadoAnimadoHover;
+                            @include subrayadoAnimadoHover();
                         }
                     }
                 }
