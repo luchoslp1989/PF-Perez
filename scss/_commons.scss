@@ -78,7 +78,7 @@ footer{
     font-size: $fontL;
 }
 .parrafoSm{
-    font-size: $fontSm;
+    @include parrafos($fontSm, $roboto, $fontColor)
 }
 
 .textCenter{
