@@ -71,11 +71,11 @@ footer ul li {
 }
 
 .tituloPrincipalXL {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .tituloMd {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .parrafoSm {
@@ -193,7 +193,7 @@ footer ul li {
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 20vh 90vh 130vh 10vh;
+  grid-template-rows: auto 20vh 100vh 130vh 10vh;
   grid-template-areas: "nav" "header" "main" "mapa" "pie";
 }
 .gridContainer #botonera {

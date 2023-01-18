@@ -70,10 +70,10 @@ footer{
    width: $w-100;
 }
 .tituloPrincipalXL{
-    font-size: $fontXL;
+    font-size: $fontXXL;
 }
 .tituloMd{
-    font-size: $fontL;
+    font-size: $fontXL;
 }
 .parrafoSm{
     @include parrafos($fontSm, $roboto, $fontColor)
