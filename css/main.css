@@ -6,9 +6,9 @@
 }
 
 p {
+  font-size: 0.8;
+  font-family: "Roboto", sans-serif;
   color: black;
-  font-family: "Open sans", sans-serif;
-  font-size: 0.8em;
 }
 
 footer ul {
@@ -41,7 +41,7 @@ footer ul li {
   color: black;
 }
 .btnContacto:hover {
-  background-color: #C8D98B;
+  background-color: #c1cc9b;
   transform: scale(1.09);
   transition: all 1s;
 }

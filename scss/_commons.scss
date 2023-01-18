@@ -5,9 +5,7 @@
 }
 
 p{
-    color: black;
-    font-family: 'Open sans', sans-serif;
-    font-size: 0.8em;
+    @include parrafos($fontXs,$roboto,$fontColor)
 }
 
 footer{
@@ -38,10 +36,10 @@ footer{
 }
 
 .btnContacto{
-    background-color: #88A61C;
-    color: black;
+    background-color: $btnColor;
+    color: $fontColor;
     &:hover{
-        background-color: #C8D98B;
+        background-color: $btnHoverColor;
         transform: scale(1.09);
 	    transition: all 1s;
     }
@@ -51,7 +49,7 @@ footer{
     width: auto;
     height: auto;
     margin: 10px;
-    border: dotted 3px #88A61C;
+    border: $borderMainSection;
     padding: 10px 10px;
 }
 
@@ -106,7 +104,7 @@ footer{
 }
 .pie{
     padding: 10px 50px;
-    background-color: #65a603;
+    background-color: $footerColor;
     text-align: center;
     margin-right: 8px;
     width: 100%;
@@ -148,7 +146,7 @@ footer{
     width: 400px;
 }
 .borderDottedGreen{
-    border: dotted 3px #88A61C;
+    border: $borderMainSection;
     
 }
 .marginEntreSections{
