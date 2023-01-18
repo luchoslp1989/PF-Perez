@@ -1,12 +1,12 @@
 #botonera{
-    background-color: #65a603;
+    background-color: $mainColor;
     grid-area: nav;
     ul{
         li{
             margin-right: 10px;
             a{
                 color: $fontColor;
-                font-size: $fontMD;
+                text-decoration: none;
                 @include subrayadoAnimado();
                 &:hover{
                     color: black;

@@ -167,7 +167,7 @@ footer ul li {
 }
 
 #botonera {
-  background-color: #65a603;
+  background-color: #497320;
   grid-area: nav;
 }
 #botonera ul li {
@@ -175,7 +175,7 @@ footer ul li {
 }
 #botonera ul li a {
   color: black;
-  font-size: 1.2em;
+  text-decoration: none;
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0% 100%;
   background-repeat: no-repeat;
