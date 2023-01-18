@@ -1,0 +1,141 @@
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 13vh 80vh 130vh 10vh;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "mapa"
+    "pie";
+    #botonera{
+        background-color: $mainColor;
+        grid-area: nav;
+    }
+    #imgHeader{
+        grid-area: header;
+    }    
+    #main{
+        grid-area: main;
+    
+    }    
+    #aside{
+        grid-area: aside;
+    }    
+    #mapa{
+        grid-area: mapa;
+        background-color: $secondaryColor;
+        width: auto;
+        height: auto;
+    }    
+    #footer{
+        grid-area: pie;
+    }
+    @media (min-width:768px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 25vh 35vh 80vh 110vh 10vh;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "mapa"
+        "pie";
+        #botonera{
+            ul{
+                li{
+                    color: $fontColor;
+                    font-size: 1em;
+                    text-decoration: none;
+                    a{
+                        color: $fontColor;
+                        font-size: 1em;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        p{
+            color: $fontColor;
+            font-family: 'Open sans', sans-serif;
+            font-size: $fontMD;
+        }
+        .pluginFacebook{
+            width: 20vw;
+            height: auto;    
+            margin-top: 50px;
+            border: $borderFacebook;
+            display:none;   
+        }
+        .principalMargin{
+            margin-top: 50px;
+        }
+        .principalSection{
+            width: auto;
+            height: auto;
+            margin: 10px 10px;
+            border: dotted 3px $secondaryColor;
+            padding: 10px 10px;
+        }
+    
+        .paddingStandard{
+        padding: 30px 30px 70px 30px;
+        }
+    }
+    @media (min-width:1024px){
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 15vh 50vh 75vh 60vh 8vh;
+        grid-template-areas: 
+        "nav nav"
+        "header header"
+        "main aside"
+        "mapa mapa"
+        "pie pie";
+        #botonera{
+            ul{
+                li{
+                    margin-right: 10px;
+                    a{
+                        color: black;
+                        font-size: 1em;
+                        text-decoration: none;
+                        @include subrayadoAnimado;
+                        &:hover{
+                            color: black;
+                            font-weight: 600;
+                            @include subrayadoAnimadoHover;
+                        }
+                    }
+                }
+            }
+        }
+        p{
+            color: $fontColor;
+            font-family: 'Open sans', sans-serif;
+            font-size: $fontXL;
+        }
+        .principalSection{
+            width: 80%;
+            height: auto;
+            border: dotted 3px $secondaryColor;
+            margin: 10px;
+        }
+        .pluginFacebook{
+            width: 76%;
+            height: auto;
+            border: solid aqua 3px;
+            display: inline-block;           
+        }
+        .fDirection{
+            flex-direction: row;
+        }
+        .seccionGoogleMaps{
+            width: 70%;
+            padding: 30px;
+        }
+
+    }
+    
+    
+
+
+}

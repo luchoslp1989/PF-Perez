@@ -1,0 +1,20 @@
+#botonera{
+    background-color: #65a603;
+    grid-area: nav;
+    ul{
+        li{
+            margin-right: 10px;
+            a{
+                color: $fontColor;
+                font-size: $fontMD;
+                @include subrayadoAnimado();
+                &:hover{
+                    color: black;
+                    font-weight: 600;
+                    @include subrayadoAnimadoHover();
+                }
+            }
+        }
+    }
+}
+
