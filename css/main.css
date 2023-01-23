@@ -228,7 +228,7 @@ footer ul li {
 @media (min-width: 768px) {
   .gridContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: 25vh 35vh 80vh 110vh 10vh;
+    grid-template-rows: auto 35vh 80vh 110vh 10vh;
     grid-template-areas: "nav" "header" "main" "mapa" "pie";
   }
   .gridContainer #botonera ul li {
@@ -270,7 +270,7 @@ footer ul li {
 @media (min-width: 1024px) {
   .gridContainer {
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 15vh 50vh 75vh 60vh 8vh;
+    grid-template-rows: auto 50vh 75vh 60vh 8vh;
     grid-template-areas: "nav nav" "header header" "main aside" "mapa mapa" "pie pie";
   }
   .gridContainer #botonera ul li {
