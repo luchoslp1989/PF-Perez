@@ -2,7 +2,7 @@
 .gridContainer{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 20vh 100vh 130vh 10vh;
+    grid-template-rows: auto 20vh 80vh 130vh 10vh;
     grid-template-areas: 
     "nav"
     "header"
@@ -42,7 +42,7 @@
     }
     @media (min-width:768px){
         grid-template-columns: 1fr;
-        grid-template-rows: auto 35vh 80vh 110vh 10vh;
+        grid-template-rows: auto 35vh 50vh 110vh 10vh;
         grid-template-areas: 
         "nav"
         "header"
