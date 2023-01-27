@@ -2,7 +2,7 @@
 .gridContainer{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 20vh 80vh 130vh 10vh;
+    grid-template-rows: auto 20vh 110vh 110vh 10vh;
     grid-template-areas: 
     "nav"
     "header"
@@ -27,7 +27,6 @@
             height: auto;
             display: none;
             margin-top: 50px 30px;
-            border: solid aqua 3px;
            
         }
     }    
@@ -42,7 +41,7 @@
     }
     @media (min-width:768px){
         grid-template-columns: 1fr;
-        grid-template-rows: auto 35vh 50vh 110vh 10vh;
+        grid-template-rows: auto 35vh 130vh 110vh 10vh;
         grid-template-areas: 
         "nav"
         "header"
@@ -73,7 +72,6 @@
                 width: 20vw;
                 height: auto;    
                 margin-top: 50px;
-                border: $borderFacebook;
                 display:none;   
             }
         }
@@ -94,7 +92,7 @@
     }
     @media (min-width:1024px){
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: auto 50vh 75vh 60vh 8vh;
+        grid-template-rows: auto 50vh 135vh 60vh 8vh;
         grid-template-areas: 
         "nav nav"
         "header header"
@@ -121,9 +119,8 @@
         }
         #aside{
             .pluginFacebook{
-                width: 82.4%;
+                width: 77%;
                 height: auto;
-                border: solid aqua 3px;
                 display: inline-block;           
             }
         }

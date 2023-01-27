@@ -193,7 +193,7 @@ footer ul li {
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 20vh 80vh 130vh 10vh;
+  grid-template-rows: auto 20vh 110vh 110vh 10vh;
   grid-template-areas: "nav" "header" "main" "mapa" "pie";
 }
 .gridContainer #botonera {
@@ -214,7 +214,6 @@ footer ul li {
   height: auto;
   display: none;
   margin-top: 50px 30px;
-  border: solid aqua 3px;
 }
 .gridContainer #mapa {
   grid-area: mapa;
@@ -228,7 +227,7 @@ footer ul li {
 @media (min-width: 768px) {
   .gridContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 35vh 50vh 110vh 10vh;
+    grid-template-rows: auto 35vh 130vh 110vh 10vh;
     grid-template-areas: "nav" "header" "main" "mapa" "pie";
   }
   .gridContainer #botonera ul li {
@@ -250,7 +249,6 @@ footer ul li {
     width: 20vw;
     height: auto;
     margin-top: 50px;
-    border: solid aqua 3px;
     display: none;
   }
   .gridContainer .principalMargin {
@@ -270,7 +268,7 @@ footer ul li {
 @media (min-width: 1024px) {
   .gridContainer {
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 50vh 75vh 60vh 8vh;
+    grid-template-rows: auto 50vh 135vh 60vh 8vh;
     grid-template-areas: "nav nav" "header header" "main aside" "mapa mapa" "pie pie";
   }
   .gridContainer #botonera ul li {
@@ -292,9 +290,8 @@ footer ul li {
     background-size: 100% 2px;
   }
   .gridContainer #aside .pluginFacebook {
-    width: 82.4%;
+    width: 77%;
     height: auto;
-    border: solid aqua 3px;
     display: inline-block;
   }
   .gridContainer p {
