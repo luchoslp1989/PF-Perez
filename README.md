@@ -6,7 +6,8 @@ Este desarrollo fue realizando utilizabdo todas las funcionalidades que se fuero
 Finalmente, se todo lo desarrollado en css puro a un archivo que utiliza la herramienta de desarrollo sass que nos permite generar un archivo de estilo automaticamente, escribiendo con una estructura mucho mas prolija y legible para los desarrolladores, permitiendo uso de anidacion, de variables y de mixins. Esto tambien resulto bastante complejo, pero con la practica y leyendo el archivo css generado por sass se pudieron ir puliendo errores del desarrollo.
 Adjunto a continuacion los links para la revsion del trabajo. En la page de contacto,, al presionar el icono de facebook messenger, nos llevara a la pagina de error 404. 
 
-Links:
-Repositorio:
-Github:
-Servidor:
+Links
+
+Repositorio: https://github.com/luchoslp1989/PF-Perez.git
+Github Pages: https://luchoslp1989.github.io/PF-Perez/
+Servidor: https://ruta6club.000webhostapp.com/
