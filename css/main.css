@@ -193,7 +193,7 @@ footer ul li {
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 20vh 110vh 110vh 10vh;
+  grid-template-rows: auto 20vh 120vh 110vh 10vh;
   grid-template-areas: "nav" "header" "main" "mapa" "pie";
 }
 .gridContainer #botonera {
@@ -227,7 +227,7 @@ footer ul li {
 @media (min-width: 768px) {
   .gridContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 35vh 130vh 110vh 10vh;
+    grid-template-rows: auto 35vh 135vh 110vh 10vh;
     grid-template-areas: "nav" "header" "main" "mapa" "pie";
   }
   .gridContainer #botonera ul li {
@@ -268,7 +268,7 @@ footer ul li {
 @media (min-width: 1024px) {
   .gridContainer {
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 50vh 135vh 60vh 8vh;
+    grid-template-rows: auto 50vh 150vh 70vh 8vh;
     grid-template-areas: "nav nav" "header header" "main aside" "mapa mapa" "pie pie";
   }
   .gridContainer #botonera ul li {
