@@ -17,9 +17,9 @@ const pintarMensaje = (nombre) => {
         div.className = 'card w-100 h-100'
         div.innerHTML = `
                 <div class="card-body">
-                    <p class="card-text">Hola ${nombre}. Gracias por tu mensaje. Responderemos a la brevedad. Si queres comunicarte directamente con la administracion, hace click en el siguiente boton.</p>
+                    <p class="mx-3 card-text">Hola ${nombre}. Gracias por tu mensaje. Responderemos a la brevedad. Si queres comunicarte directamente con la administracion, hace click en el siguiente boton.</p>
                     <div class="d-flex justify-content-end">
-                        <a href="https://api.whatsapp.com/send?phone=541159429901" target="_blank" class="btn btnWap btn-success">Escribinos por Whatsapp</a>
+                        <a href="https://api.whatsapp.com/send?phone=541159429901" target="_blank" class="btn btnWap btn-success me-3">Escribinos por Whatsapp</a>
                     </div>
                 </div>
         `
