@@ -1,4 +1,4 @@
- const pintarCards = () => {
+const pintarCards = () => {
      const contenedor = document.querySelector('#novedades-contenedor')
 
      novedades.forEach( novedad => {
@@ -23,3 +23,4 @@
  };
 
  pintarCards()
+
