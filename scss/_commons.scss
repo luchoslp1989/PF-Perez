@@ -8,6 +8,9 @@ p{
     @include parrafos($fontXs,$roboto,$fontColor)
 }
 
+
+
+
 footer{
     ul{
         margin: auto;
@@ -52,11 +55,8 @@ footer{
   }
 
 .principalSection{
-    width: auto;
-    height: auto;
-    margin: 10px;
+
     border: $borderMainSection;
-    padding: 10px 10px;
 }
 
 
@@ -111,8 +111,6 @@ footer{
     margin-right: 8px;
     width: 100%;
     box-sizing: border-box;
-    height: 10vh;
-    
 }
 .iconSmall{
     width: 30px;
@@ -134,15 +132,16 @@ footer{
     justify-content: stretch;
 }
 
-.seccionDireccion{
-    width: 45%;
-    padding-top: 10px;
-    padding-left: 30px;
-}
-.seccionGoogleMaps{
-    width: auto;
-    padding: 30px;
-}
+// .seccionDireccion{
+//     width: 45%;
+//     padding-top: 10px;
+//     padding-left: 30px;
+// }
+
+// .seccionGoogleMaps{
+//     width: auto;
+//     padding: 30px;
+// }
 
 .imgSm{
     width: 400px;
@@ -158,4 +157,8 @@ footer{
 
 .alignItem{
     align-items: flex-start;
+}
+
+#mapa{
+    background-color: $secondaryColor;
 }

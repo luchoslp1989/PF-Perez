@@ -13,7 +13,7 @@
     <meta name="author" content="Sergio Perez">
 </head>
 <body>
-    <div class="gridContainer">
+    
         <!-- inicia botonera -->
         <nav id="botonera" class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -75,33 +75,39 @@
           <!-- fin carousel -->
         </header>
         <!-- cierra header -->
-        <main id="main" class="principalSection">
-            <section class="textCenter">
-                <h1 class="tituloPrincipalXL">Bienvenidos a Ruta 6 Club</h1>
-                <p class="parrafoSm">Vení a desconectarte de la ciudad y disfrutar de nuestro club, a solo 45 min de la Ciudad de Buenos Aires. Encontrarás la tranquilidad de estar en un lugar seguro, accesible y rodeado de naturaleza. Ideal para disfrutar lindos momentos solos, o en familia. Acercate a conocer nuestro club de campo. </p>
-                <img src="./img/fuente.webp" class="img-fluid rounded" alt="Fuente de agua con arboles, garita de seguridad y porton de entrada de fondo.">
-            </section>
-        </main>
-        <div id="aside" class="dFlex alignItem">
-            <aside class="pluginFacebook">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRuta6Club-317529885603094%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            </aside>
+        <div class="row ps-5 container-fluid">
+          <main id="main" class="col-sm-12 col-md-12 col-lg-8 my-3 py-3 principalSection container-fluid">
+              <section class="textCenter">
+                  <h1 class="tituloPrincipalXL">Bienvenidos a Ruta 6 Club</h1>
+                  <p class="parrafoSm">Vení a desconectarte de la ciudad y disfrutar de nuestro club, a solo 45 min de la Ciudad de Buenos Aires. Encontrarás la tranquilidad de estar en un lugar seguro, accesible y rodeado de naturaleza. Ideal para disfrutar lindos momentos solos, o en familia. Acercate a conocer nuestro club de campo. </p>
+                  <img src="./img/fuente.webp" class="img-fluid rounded" alt="Fuente de agua con arboles, garita de seguridad y porton de entrada de fondo.">
+              </section>
+          </main>
+          <div id="aside" class="container-fluid alignItem d-none d-lg-inline-block col-lg-4 my-3 py-3">
+              <aside class="pluginFacebook">
+                  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRuta6Club-317529885603094%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="500" style="border:solid aqua 5px;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </aside>
+          </div>
         </div>
 
-        <div id="mapa" class=" dFlex fDirection justifyContentCenter alignContentCenter">
-            <article class="textLeft seccionDireccion">
-                <h2 class="tituloMd">Direccion</h3>
-                <p class="parrafoSm">RP6 km 150 </p>
-                <p class="parrafoSm">Gral. Rodríguez</p>
-                <p class="parrafoSm">Provincia de Buenos Aires</p>
-            </article>
+        <article id="mapa" class="container-fluid">
+          <div class="row  d-flex justify-content-between">
+          <section class="flex-wrap py-3 col-sm-12 col-md-12 col-lg-6">
+            <h2 class="tituloMd">Direccion</h3>
+            <p class="parrafoSm">RP6 km 150 </p>
+            <p class="parrafoSm">Gral. Rodríguez</p>
+            <p class="parrafoSm">Provincia de Buenos Aires</p>
+          </section>
+          <section  class="py-3 col-sm-12 col-md-12 col-lg-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.213809624207!2d-59.04228178544168!3d-34.598754564741164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc86217fba1eb7%3A0xd6beb0acb716bf19!2sRUTA6CLUB!5e0!3m2!1ses-419!2sar!4v1669643464449!5m2!1ses-419!2sar" width="80%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+          </section>
+        </div>
+        </article>
 
-            <article class="seccionGoogleMaps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.213809624207!2d-59.04228178544168!3d-34.598754564741164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc86217fba1eb7%3A0xd6beb0acb716bf19!2sRUTA6CLUB!5e0!3m2!1ses-419!2sar!4v1669643464449!5m2!1ses-419!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </article>
+
+          
             <!-- cierra section mapa -->
-
-        </div>
+          
         <!-- cierra main -->
         <footer  id="footer" class="pie">
             <!-- inicia lista de redes sociales -->
@@ -125,7 +131,7 @@
         <!-- cierra list redes sociales -->
     </footer>
         <!-- cierra footer -->
-    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </body>
