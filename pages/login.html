@@ -78,65 +78,43 @@
           <!-- fin carousel -->
     </header>
     <!-- cierra header -->
-    <main>
-        <section class="row container-fluid">
-            <h1>Novedades</h1>
-            <div id="novedades-contenedor">
-                <!-- <div class="card mb-3">
-                    <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h2 class="card-title">Mejoras en el sector de encuentro de nuestros socios más jóvenes</h2>
-                        <p class="card-text"><small class="text-muted">15.10.2022</small></p>
-                        </div>
+    <main class="container py-3">
+        <section class="row d-flex justify-content-evenly">
+            <article class="col-sm-12 col-md-12 col-lg-6">
+                <form id="login">
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
                     </div>
-                    <div class="col-md-4">
-                        <img src="../img/punto_joven.webp" class="img-fluid rounded-start" alt="Cabaña en construccion">
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password">
                     </div>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                  </form>
+            </article>
+            <article class="col-sm-12 col-md-12 col-lg-6">
+                <form id="registro">
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
                     </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h2 class="card-title">Instalación Cerco Perimetral Eléctrico</h2>
-                        <p class="card-text"><small class="text-muted">26.06.2022</small></p>
-                        </div>
+                    <div class="mb-3">
+                        <label for="emailRepeat" class="form-label">Repetir Email</label>
+                        <input type="email" class="form-control" id="emailRepeat" aria-describedby="emailHelp">
                     </div>
-                    <div class="col-md-4">
-                        <img src="../img/cerco.webp" class="img-fluid rounded-start" alt="Hombre instalando un sistema de seguridad.">
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password">
                     </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h2 class="card-title">Ampliación y mejoras en la red de suministro de agua</h2>
-                        <p class="card-text"><small class="text-muted">31.07.2021</small></p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="../img/red_agua.webp" class="img-fluid rounded-start" alt="Zanjas cavadas en el cesped para colocacion de red de agua">
-                    </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h2 class="card-title">Ampliación sector verde de pileta</h2>
-                        <p class="card-text"><small class="text-muted">18.07.2021</small></p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="../img/sector_verde_pileta.webp" class="img-fluid rounded-start" alt="Asientos y mesas al rededor de la pileta.">
-                    </div>
-                    </div>
-                </div> -->
-            </div>
-        </section>
-       
+                    <div class="mb-3">
+                        <label for="passwordRepeat" class="form-label">Repetir Password</label>
+                        <input type="password" class="form-control" id="passwordRepeat">
+                      </div>
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                  </form>
+            </article>
+        </section>       
     </main>
     <!-- cierra main -->
     <footer  class="pie">
