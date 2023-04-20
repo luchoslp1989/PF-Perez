@@ -15,6 +15,13 @@ const registroUsuario = () => {
     const email = document.getElementById('emailRegistro').value;
     const pass = document.getElementById('passwordRegistro').value;
 
+    const emailRegistrado = usuarios.some( usuario => usuario.email === email)
+
+    if(emailRegistrado){
+        pintarMensaje()
+        return
+    }
+
     const usuario = new Usuario(nombre, apellido, email, pass)
 
     usuarios.push(usuario)
@@ -22,6 +29,10 @@ const registroUsuario = () => {
     let usuariosJson = JSON.stringify(usuarios)
 
     localStorage.setItem('usuarios', usuariosJson);
+};
+
+const loginUsuario = () => {
+    
 };
 
 formulario.addEventListener('submit',(e) => {
@@ -32,6 +43,8 @@ formulario.addEventListener('submit',(e) => {
 
 formLogin.addEventListener('submit',(e) => {
     e.preventDefault()
+
+    loginUsuario()
 
 })
 
@@ -45,3 +58,22 @@ function recuperoUsuariosDeLocal() {
     }
     }
 }
+
+function existeMensaje(container) {
+    const miDiv = document.querySelector("#emailRegistrado #miDiv")
+    if (miDiv) {
+      container.removeChild(miDiv)
+    }
+  }
+
+const pintarMensaje = (nombre) => {
+    const container = document.querySelector('#emailRegistrado')
+
+    existeMensaje(container)
+
+    const div = document.createElement('div')
+        div.id = "miDiv"
+        div.innerHTML = `<div class="text-danger"> Esta email ya se encuentra registrado  </div>`
+    container.appendChild(div)
+
+};
