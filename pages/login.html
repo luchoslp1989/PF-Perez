@@ -79,22 +79,38 @@
     </header>
     <!-- cierra header -->
     <main class="container py-3">
+        <!-- INICIA LOGIN -->
         <section class="row d-flex justify-content-evenly">
             <article class="col-sm-12 col-md-12 col-lg-6">
                 <form id="login">
                     <div class="mb-3">
                       <label for="email" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                      <input type="email" class="form-control" id="email">
                     </div>
                     <div class="mb-3">
                       <label for="password" class="form-label">Password</label>
                       <input type="password" class="form-control" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                    <div class="d-grid">
+                      <button type="submit" class="btn btnContacto">Iniciar Sesion</button>
+                    </div>
+                    <span><a href="#">Olvide mi contraseña</a></span>
                   </form>
             </article>
+
+            <!-- FIN LOGIN -->
+
+            <!-- INICIA REGISTRO -->
             <article class="col-sm-12 col-md-12 col-lg-6">
                 <form id="registro">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="email" class="form-control" id="name" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="lastName" class="form-label">Apellido</label>
+                    <input type="email" class="form-control" id="lastName" aria-describedby="emailHelp">
+                  </div>
                     <div class="mb-3">
                       <label for="email" class="form-label">Email</label>
                       <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
@@ -110,11 +126,16 @@
                     <div class="mb-3">
                         <label for="passwordRepeat" class="form-label">Repetir Password</label>
                         <input type="password" class="form-control" id="passwordRepeat">
-                      </div>
-                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </div>
+                    <div class="d-grid">
+                      <button type="submit" class="btn btnContacto">Registrarse</button>
+                    </div>
                   </form>
             </article>
         </section>       
+
+        <!-- FIN REGISTRO -->
+
     </main>
     <!-- cierra main -->
     <footer  class="pie">
