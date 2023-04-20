@@ -39,7 +39,7 @@
                 <a href="../pages/novedades.html">Novedades</a>
               </li>
               <li class="nav-item">
-                <a id="loginPage" href="./pages/login.html">Login</a>
+                <a id="loginPage" href="../pages/login.html">Login</a>
               </li>
             </ul>
           </div>
@@ -80,7 +80,7 @@
     <!-- cierra header -->
     <main class="container py-3">
         <!-- INICIA LOGIN -->
-        <section class="row d-flex justify-content-evenly">
+        <section id="bienvenidaLogin" class="row d-flex justify-content-evenly">
             <article class="col-sm-12 col-md-12 col-lg-6">
                 <form id="login" class="needs-validation" novalidate>
                     <div class="mb-3">
@@ -95,6 +95,7 @@
                       <div class="valid-feedback"></div>
                       <div class="invalid-feedback">Es necesario poner este dato</div>
                     </div>
+                    <div id="emailUsuarioNoEncontrado"></div>
                     <div class="d-grid">
                       <button type="submit" class="btn btnContacto">Iniciar Sesion</button>
                     </div>

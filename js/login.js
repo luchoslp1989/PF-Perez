@@ -1,3 +1,4 @@
+// capturo formularios
 const formulario = document.getElementById('registro');
 
 const formLogin = document.getElementById('login');
@@ -7,7 +8,7 @@ let usuarios = []
 // recupero usuarios de localStorage cada vez que se reinicia el script para mantener mi array actualizado
 recuperoUsuariosDeLocal();
 
-
+// registro un nuevo usuairo y lo guarda en localStorage
 const registroUsuario = () => {
 
     const nombre = document.getElementById('name').value;
@@ -24,15 +25,47 @@ const registroUsuario = () => {
 
     const usuario = new Usuario(nombre, apellido, email, pass)
 
-    usuarios.push(usuario)
+    guardarEnLocalStorage(usuario);
 
-    let usuariosJson = JSON.stringify(usuarios)
-
-    localStorage.setItem('usuarios', usuariosJson);
+   
 };
 
+//recibe un usuario, lo mete al array de usuarios y lo guarda en localStorage
+ function guardarEnLocalStorage(usuario) {
+        usuarios.push(usuario);
+
+        let usuariosJson = JSON.stringify(usuarios);
+
+        localStorage.setItem('usuarios', usuariosJson);
+
+        // borro mensaje de email registrado si se pinto antes
+        const container = document.querySelector('#emailRegistrado');
+        existeMensaje(container);
+    }
+
+//Pinta Bienvenida en el DOM si se logea Exitosamente 
+const pintarBienvenida = ({nombre,email}) => {
+    const container = document.querySelector('#bienvenidaLogin')
+
+    const div = document.createElement('div')
+        div.id = "miDiv"
+        div.innerHTML = `<div class="card mb-3 d-flex align-items-stretch  container-fluid d-grid">
+                            <div class="card text-success tituloMd align-self-center"> Bienvenido ${nombre}!!  </div>
+                            <div class="col-md-4 d-flex justify-content-center align-self-center">
+                                <img src="../img/ruta6Bienvenido.webp" class="img-fluid rounded-start" alt="Cabaña en construccion">
+                            </div>
+                            <div class="card text-success tituloMd align-self-center"> Email registrado: ${email}  </div>
+                        <div>
+        `
+    container.appendChild(div)
+};
+
+
 const loginUsuario = () => {
-    
+    const email = document.getElementById('emailLogin').value;
+    const pass = document.getElementById('passwordLogin').value;
+
+    existeUsuario(email, pass);
 };
 
 formulario.addEventListener('submit',(e) => {
@@ -48,6 +81,21 @@ formLogin.addEventListener('submit',(e) => {
 
 })
 
+//Verifica si el usuario ya esta registrado
+function existeUsuario(email, pass) {
+    for (const usuario of usuarios) {
+        if (usuario.email === email && usuario.password == pass) {
+            formLogin.style.display = 'none';
+            formulario.style.display = 'none';
+            pintarBienvenida(usuario);
+            break;
+        } else {
+            pintarNoEncontrado();
+        }
+    }
+}
+
+// recupero, si existen, todos los usuario del localStorage
 function recuperoUsuariosDeLocal() {
     if(localStorage.length > 0){
     let usuariosRec = localStorage.getItem('usuarios');
@@ -59,6 +107,7 @@ function recuperoUsuariosDeLocal() {
     }
 }
 
+// Verifica si ya existe en el dom el mensaje de email registrado, y lo elimina
 function existeMensaje(container) {
     const miDiv = document.querySelector("#emailRegistrado #miDiv")
     if (miDiv) {
@@ -66,6 +115,7 @@ function existeMensaje(container) {
     }
   }
 
+// pinta mensaje de email ya registrado
 const pintarMensaje = (nombre) => {
     const container = document.querySelector('#emailRegistrado')
 
@@ -76,4 +126,24 @@ const pintarMensaje = (nombre) => {
         div.innerHTML = `<div class="text-danger"> Esta email ya se encuentra registrado  </div>`
     container.appendChild(div)
 
+};
+
+// Verifica si ya existe en el dom el mensaje de usuario no encontrado, y lo elimina
+function existeMensajeNoEncontrado(container) {
+    const miDiv = document.querySelector("#emailUsuarioNoEncontrado #miDiv")
+    if (miDiv) {
+      container.removeChild(miDiv)
+    }
+  }
+
+// pinta el mensaje de usuario no encontrado
+const pintarNoEncontrado = () => {
+    const container = document.querySelector('#emailUsuarioNoEncontrado')
+
+    existeMensajeNoEncontrado(container)
+
+    const div = document.createElement('div')
+        div.id = "miDiv"
+        div.innerHTML = `<div class="text-danger"> Usuario no encontrado  </div>`
+    container.appendChild(div)
 };
