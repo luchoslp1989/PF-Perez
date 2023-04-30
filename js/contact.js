@@ -14,20 +14,11 @@ formulario.addEventListener('submit', (e) => {
 
 })
 
-// si ya existe un div creado anteriormente, lo elimmino del dom
-function existeMensaje(container) {
-    const miDiv = document.querySelector("#containerMensaje #miDiv")
-    if (miDiv) {
-      container.removeChild(miDiv)
-    }
-  }
+
 
   //pintaMensaje en el dom
 const pintarMensaje = (nombre) => {
     const container = document.querySelector('#containerMensaje')
-
-    
-    existeMensaje(container)
 
     const div = document.createElement('div')
         div.className = 'card w-100 h-100'
@@ -40,6 +31,8 @@ const pintarMensaje = (nombre) => {
                     </div>
                 </div>
         `
+
+    container.innerHTML = ''
     container.appendChild(div)
 
 };
