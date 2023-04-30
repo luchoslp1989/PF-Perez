@@ -3,10 +3,10 @@ const formulario = document.getElementById('registro');
 
 const formLogin = document.getElementById('login');
 
-let usuarios = []
+let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
 // recupero usuarios de localStorage cada vez que se reinicia el script para mantener mi array actualizado
-recuperoUsuariosDeLocal();
+//recuperoUsuariosDeLocal();
 
 // registro un nuevo usuairo y lo guarda en localStorage
 const registroUsuario = () => {
@@ -100,15 +100,15 @@ function existeUsuario(email, pass) {
 }
 
 // recupero, si existen, todos los usuario del localStorage
-function recuperoUsuariosDeLocal() {
-    let usuariosRec = localStorage.getItem('usuarios');
-    if(usuariosRec){
-    usuariosRec = JSON.parse(usuariosRec);
-    for (const usuario of usuariosRec) {
-        usuarios.push(usuario)
-    }
-    }
-}
+// function recuperoUsuariosDeLocal() {
+//     let usuariosRec = localStorage.getItem('usuarios');
+//     if(usuariosRec){
+//     usuariosRec = JSON.parse(usuariosRec);
+//     for (const usuario of usuariosRec) {
+//         usuarios.push(usuario)
+//     }
+//     }
+// }
 
 // Verifica si ya existe en el dom el mensaje de email registrado, y lo elimina
 function existeMensaje(container) {
