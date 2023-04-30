@@ -64,7 +64,7 @@ const pintarBienvenida = ({nombre,email}) => {
 const loginUsuario = () => {
     const email = document.getElementById('emailLogin').value;
     const pass = document.getElementById('passwordLogin').value;
-
+    
     existeUsuario(email, pass);
 };
 
@@ -83,23 +83,26 @@ formLogin.addEventListener('submit',(e) => {
 
 //Verifica si el usuario ya esta registrado
 function existeUsuario(email, pass) {
+    let encontrado = false
     for (const usuario of usuarios) {
         if (usuario.email === email && usuario.password == pass) {
+            encontrado = true
             formLogin.style.display = 'none';
             formulario.style.display = 'none';
             pintarBienvenida(usuario);
             break;
-        } else {
-            pintarNoEncontrado();
         }
+        
+    }
+    if (!encontrado){
+        pintarNoEncontrado();
     }
 }
 
 // recupero, si existen, todos los usuario del localStorage
 function recuperoUsuariosDeLocal() {
-    if(localStorage.length > 0){
     let usuariosRec = localStorage.getItem('usuarios');
-
+    if(usuariosRec){
     usuariosRec = JSON.parse(usuariosRec);
     for (const usuario of usuariosRec) {
         usuarios.push(usuario)
