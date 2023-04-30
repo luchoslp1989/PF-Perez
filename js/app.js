@@ -1,7 +1,8 @@
-const pintarCards = () => {
+const pintarCards = async () => {
+    const data = await getNovedades(); 
      const contenedor = document.querySelector('#novedades-contenedor')
 
-     novedades.forEach( novedad => {
+     data.forEach( novedad => {
         const div = document.createElement('div')
         div.className = 'card mb-3'
         div.innerHTML = `
