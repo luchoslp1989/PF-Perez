@@ -1,12 +1,9 @@
 // capturo formularios
 const formulario = document.getElementById('registro');
-
 const formLogin = document.getElementById('login');
 
+// recupero usuaarios de localStorage si existen, sino, creo un array vacio
 let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-// recupero usuarios de localStorage cada vez que se reinicia el script para mantener mi array actualizado
-//recuperoUsuariosDeLocal();
 
 // registro un nuevo usuairo y lo guarda en localStorage
 const registroUsuario = () => {
@@ -16,13 +13,14 @@ const registroUsuario = () => {
     const email = document.getElementById('emailRegistro').value;
     const pass = document.getElementById('passwordRegistro').value;
 
+    // consulta si el email ya se registro anteriormente
     const emailRegistrado = usuarios.some( usuario => usuario.email === email)
 
     if(emailRegistrado){
         pintarMensaje()
         return
     }
-
+    // instancio un objeto de clase usuario
     const usuario = new Usuario(nombre, apellido, email, pass)
 
     guardarEnLocalStorage(usuario);
@@ -40,7 +38,7 @@ const registroUsuario = () => {
 
         // borro mensaje de email registrado si se pinto antes
         const container = document.querySelector('#emailRegistrado');
-        existeMensaje(container);
+        container.innerHTML = ''
     }
 
 //Pinta Bienvenida en el DOM si se logea Exitosamente 
@@ -91,62 +89,29 @@ function existeUsuario(email, pass) {
             formulario.style.display = 'none';
             pintarBienvenida(usuario);
             break;
-        }
-        
+        }    
     }
     if (!encontrado){
         pintarNoEncontrado();
     }
 }
 
-// recupero, si existen, todos los usuario del localStorage
-// function recuperoUsuariosDeLocal() {
-//     let usuariosRec = localStorage.getItem('usuarios');
-//     if(usuariosRec){
-//     usuariosRec = JSON.parse(usuariosRec);
-//     for (const usuario of usuariosRec) {
-//         usuarios.push(usuario)
-//     }
-//     }
-// }
-
-// Verifica si ya existe en el dom el mensaje de email registrado, y lo elimina
-function existeMensaje(container) {
-    const miDiv = document.querySelector("#emailRegistrado #miDiv")
-    if (miDiv) {
-      container.removeChild(miDiv)
-    }
-  }
-
 // pinta mensaje de email ya registrado
 const pintarMensaje = (nombre) => {
     const container = document.querySelector('#emailRegistrado')
-
-    existeMensaje(container)
-
     const div = document.createElement('div')
-        div.id = "miDiv"
-        div.innerHTML = `<div class="text-danger"> Esta email ya se encuentra registrado  </div>`
+    div.id = "miDiv"
+    div.innerHTML = `<div class="text-danger"> Esta email ya se encuentra registrado  </div>`
+    container.innerHTML = ''
     container.appendChild(div)
-
 };
-
-// Verifica si ya existe en el dom el mensaje de usuario no encontrado, y lo elimina
-function existeMensajeNoEncontrado(container) {
-    const miDiv = document.querySelector("#emailUsuarioNoEncontrado #miDiv")
-    if (miDiv) {
-      container.removeChild(miDiv)
-    }
-  }
 
 // pinta el mensaje de usuario no encontrado
 const pintarNoEncontrado = () => {
     const container = document.querySelector('#emailUsuarioNoEncontrado')
-
-    existeMensajeNoEncontrado(container)
-
     const div = document.createElement('div')
-        div.id = "miDiv"
-        div.innerHTML = `<div class="text-danger"> Usuario no encontrado  </div>`
+    div.id = "miDiv"
+    div.innerHTML = `<div class="text-danger"> Usuario no encontrado  </div>`
+    container.innerHTML = ''
     container.appendChild(div)
 };
