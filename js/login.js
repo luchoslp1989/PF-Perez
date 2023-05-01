@@ -84,6 +84,7 @@ function existeUsuario(email, pass) {
     let encontrado = false
     for (const usuario of usuarios) {
         if (usuario.email === email && usuario.password == pass) {
+            alertLoginSuccess(usuario)
             encontrado = true
             formLogin.style.display = 'none';
             formulario.style.display = 'none';
@@ -97,7 +98,7 @@ function existeUsuario(email, pass) {
 }
 
 // pinta mensaje de email ya registrado
-const pintarMensaje = (nombre) => {
+const pintarMensaje = () => {
     const container = document.querySelector('#emailRegistrado')
     const div = document.createElement('div')
     div.id = "miDiv"
@@ -114,4 +115,15 @@ const pintarNoEncontrado = () => {
     div.innerHTML = `<div class="text-danger"> Usuario no encontrado  </div>`
     container.innerHTML = ''
     container.appendChild(div)
+};
+
+const alertLoginSuccess = ({nombre}) => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Ingreso exitoso',
+        text: 'Bienvenido '+ nombre+'!',
+        showConfirmButton: false,
+        timer: 2000
+    })
+
 };
