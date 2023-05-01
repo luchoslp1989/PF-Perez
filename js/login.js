@@ -17,7 +17,7 @@ const registroUsuario = () => {
     const emailRegistrado = usuarios.some( usuario => usuario.email === email)
 
     if(emailRegistrado){
-        pintarMensaje()
+        errorRegistro()
         return
     }
     // instancio un objeto de clase usuario
@@ -25,7 +25,6 @@ const registroUsuario = () => {
 
     guardarEnLocalStorage(usuario);
 
-   
 };
 
 //recibe un usuario, lo mete al array de usuarios y lo guarda en localStorage
@@ -35,10 +34,6 @@ const registroUsuario = () => {
         let usuariosJson = JSON.stringify(usuarios);
 
         localStorage.setItem('usuarios', usuariosJson);
-
-        // borro mensaje de email registrado si se pinto antes
-        const container = document.querySelector('#emailRegistrado');
-        container.innerHTML = ''
     }
 
 //Pinta Bienvenida en el DOM si se logea Exitosamente 
@@ -90,33 +85,13 @@ function existeUsuario(email, pass) {
             formulario.style.display = 'none';
             pintarBienvenida(usuario);
             break;
-        }    
+        }
     }
     if (!encontrado){
-        pintarNoEncontrado();
+        errorLogin()
     }
 }
-
-// pinta mensaje de email ya registrado
-const pintarMensaje = () => {
-    const container = document.querySelector('#emailRegistrado')
-    const div = document.createElement('div')
-    div.id = "miDiv"
-    div.innerHTML = `<div class="text-danger"> Esta email ya se encuentra registrado  </div>`
-    container.innerHTML = ''
-    container.appendChild(div)
-};
-
-// pinta el mensaje de usuario no encontrado
-const pintarNoEncontrado = () => {
-    const container = document.querySelector('#emailUsuarioNoEncontrado')
-    const div = document.createElement('div')
-    div.id = "miDiv"
-    div.innerHTML = `<div class="text-danger"> Usuario no encontrado  </div>`
-    container.innerHTML = ''
-    container.appendChild(div)
-};
-
+// sweetAlert de logeo exitoso
 const alertLoginSuccess = ({nombre}) => {
     Swal.fire({
         icon: 'success',
@@ -126,4 +101,28 @@ const alertLoginSuccess = ({nombre}) => {
         timer: 2000
     })
 
+};
+// Toastify de error login
+const errorLogin = () => {
+    Toastify({
+        text: 'Email o contraseña inconrrecta.\n Intente nuevamente.',
+        duration: 1500,
+        gravity: 'bottom',
+        position: 'right',
+        style:{
+            background: "linear-gradient(90deg, rgba(217,43,78,1) 35%, rgba(232,92,109,1) 100%)"
+        }
+    }).showToast()
+};
+// toastify email registrado anteriormente
+const errorRegistro = () => {
+    Toastify({
+        text: 'Este email ya fue registrado anteriormente.',
+        duration: 1500,
+        gravity: 'bottom',
+        position: 'right',
+        style:{
+            background: "linear-gradient(90deg, rgba(217,43,78,1) 35%, rgba(232,92,109,1) 100%)"
+        }
+    }).showToast()
 };
