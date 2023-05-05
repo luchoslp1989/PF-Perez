@@ -1,5 +1,5 @@
-// capturo formularios
-const formulario = document.getElementById('registro');
+// capturo formRegistros
+const formRegistro = document.getElementById('registro');
 const formLogin = document.getElementById('login');
 
 // recupero usuaarios de localStorage si existen, sino, creo un array vacio
@@ -16,7 +16,7 @@ const registroUsuario = () => {
     // consulta si el email ya se registro anteriormente
     const emailRegistrado = usuarios.some( usuario => usuario.email === email)
 
-    if(emailRegistrado){
+    if (emailRegistrado) {
         errorRegistro()
         return
     }
@@ -42,15 +42,45 @@ const pintarBienvenida = ({nombre,email}) => {
 
     const div = document.createElement('div')
         div.id = "miDiv"
-        div.innerHTML = `<div class="card mb-3 d-flex align-items-stretch  container-fluid d-grid">
-                            <div class="card text-success tituloMd align-self-center"> Bienvenido ${nombre}!!  </div>
-                            <div class="col-md-4 d-flex justify-content-center align-self-center">
-                                <img src="../img/ruta6Bienvenido.webp" class="img-fluid rounded-start" alt="Cabaña en construccion">
-                            </div>
-                            <div class="card text-success tituloMd align-self-center"> Email registrado: ${email}  </div>
-                        <div>
+        div.innerHTML = `<div class="container-fluid my-5">
+        <div class="row">
+          <div class="col-md-6 offset-3">
+              <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../img/empty.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h3 class="card-title">Nombre</h3>
+                        <p class="card-text">${nombre}</p>
+                        <h3 class="card-title">Email</h3>
+                        <p class="card-text">${email}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
         `
     container.appendChild(div)
+};
+
+const pintarNav = ({nombre}) => {
+    const itemLoginNav = document.getElementById('loginPage')
+
+    const div = document.createElement('div')
+    div.innerHTML = `<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ${nombre}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../pages/login.html">Cerrar sesión</a></li>
+                    </ul>
+                    `
+
+    itemLoginNav.innerHTML = ''
+    itemLoginNav.appendChild(div)
 };
 
 
@@ -61,7 +91,7 @@ const loginUsuario = () => {
     existeUsuario(email, pass);
 };
 
-formulario.addEventListener('submit',(e) => {
+formRegistro.addEventListener('submit',(e) => {
     e.preventDefault()
 
     registroUsuario()
@@ -78,12 +108,13 @@ formLogin.addEventListener('submit',(e) => {
 function existeUsuario(email, pass) {
     let encontrado = false
     for (const usuario of usuarios) {
-        if (usuario.email === email && usuario.password == pass) {
+        if (usuario.email === email && usuario.password === pass) {
             alertLoginSuccess(usuario)
             encontrado = true
             formLogin.style.display = 'none';
-            formulario.style.display = 'none';
+            formRegistro.style.display = 'none';
             pintarBienvenida(usuario);
+            pintarNav(usuario);
             break;
         }
     }
