@@ -1,9 +1,15 @@
 // capturo formRegistros
 const formRegistro = document.getElementById('registro');
 const formLogin = document.getElementById('login');
+const btnLogout = document.getElementById('loginPage');
 
 // recupero usuaarios de localStorage si existen, sino, creo un array vacio
 let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+btnLogout.addEventListener('click', () => {
+    localStorage.removeItem('usuario');
+    location.reload();
+})
 
 // registro un nuevo usuairo y lo guarda en localStorage
 const registroUsuario = () => {
@@ -71,12 +77,7 @@ const pintarNav = ({nombre}) => {
     const itemLoginNav = document.getElementById('loginPage')
 
     const div = document.createElement('div')
-    div.innerHTML = `<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ${nombre}
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../pages/login.html">Cerrar sesión</a></li>
-                    </ul>
+    div.innerHTML = `<a href="../pages/login.html">Logout</a>
                     `
 
     itemLoginNav.innerHTML = ''
@@ -115,6 +116,7 @@ function existeUsuario(email, pass) {
             formRegistro.style.display = 'none';
             pintarBienvenida(usuario);
             pintarNav(usuario);
+            localStorage.setItem('usuario', JSON.stringify(usuario));
             break;
         }
     }
@@ -157,3 +159,19 @@ const errorRegistro = () => {
         }
     }).showToast()
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    if (usuario) {
+      pintarBienvenida(usuario);
+      pintarNav(usuario);
+      formLogin.style.display = 'none';
+      formRegistro.style.display = 'none';
+    }
+  });
+
+btnLogout.addEventListener('click', () => {
+    localStorage.removeItem('usuario');
+    location.reload();
+})
+  
