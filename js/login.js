@@ -116,6 +116,7 @@ function existeUsuario(email, pass) {
             formRegistro.style.display = 'none';
             pintarBienvenida(usuario);
             pintarNav(usuario);
+            // guarda el usuario logueado
             localStorage.setItem('usuario', JSON.stringify(usuario));
             break;
         }
@@ -160,6 +161,7 @@ const errorRegistro = () => {
     }).showToast()
 };
 
+// recupero sesion al actualizar pagina
 document.addEventListener('DOMContentLoaded', () => {
     const usuario = JSON.parse(localStorage.getItem('usuario'));
     if (usuario) {
@@ -170,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+//   elimino usuario y recargo pagina para se habiliten nuevamnete ls formularios.
 btnLogout.addEventListener('click', () => {
     localStorage.removeItem('usuario');
     location.reload();
