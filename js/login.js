@@ -3,7 +3,7 @@ const formRegistro = document.getElementById('registro');
 const formLogin = document.getElementById('login');
 const btnLogout = document.getElementById('loginPage');
 
-// recupero usuaarios de localStorage si existen, sino, creo un array vacio
+// recupero usuaarios de localStorage si existen y los asigno a la variable, sino, asigno un array vacio
 let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
 btnLogout.addEventListener('click', () => {
