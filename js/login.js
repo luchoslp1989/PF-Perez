@@ -52,7 +52,7 @@ const pintarBienvenida = ({nombre,email}) => {
         <div class="row">
           <div class="col-md-6 offset-3">
               <div class="card mb-3" style="max-width: 540px;">
-                  <div class="row g-0">
+                  <div class="row g-0 m-5">
                     <div class="col-md-4">
                       <img src="../img/empty.png" class="img-fluid rounded-start" alt="...">
                     </div>
